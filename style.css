@@ -1,0 +1,13 @@
+.carreira{
+    display: flex;
+    align-items: center;
+}
+
+.pessoal{
+    display: flex;
+    align-items: center;
+}
+
+.none{
+    display: none;
+}

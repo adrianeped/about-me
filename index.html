@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
 
 <h1 id="nome" onclick="this.innerHTML = 'Saiba mais sobre mim!!'">
     Adriane Antunes Pedroso
 </h1>
 
-<p id="me">
-
+<div id="carreira" class="carreira none">
+    <p>
     <b><br>Em transição de carreira, buscando oportunidades que me ajudarão a crescer profissionalmente na área de desenvolvimento.</br></b>
-    <ul id="about">
+    <ul>
         <li>Iniciei minha carreira profissional no segundo ano do Ensino Médio, onde traballhei por 1 ano numa conveniência.</li>
         <li>Nesse período também fazia curso técnico de informática na Etec da minha cidade.</li>
         <li>Me formei no Ensino Médio e trabalhei por 1 ano no shopping numa loja de departamento.</li>
@@ -23,33 +26,45 @@
         <li>2019 eu consegui outra sala na cidade de Porto Feliz, atuando mais um ano com alunos maiores dessa vez, no Ensino Fundamental I</li>
         <li>Em 2020 lá fui eu para outra cidade, Araçoiaba da Serra, onde voltei a trabalhar com Educação Infantil e, devido as circunstâncias, de maneira remota.</li>
         <li>Neste mesmo ano iniciei outra graduação: Análise e Desenvolvimento de Sistemas em Sorocaba.</li>
-        <b><br>Agora, estou finalizando 2020 (e meu contrato em Araçoiaba) ousando estudar e procurar um estágio na área de desenvolvimento.</br></b>
+        <b><br>Agora, finalizei 2020 (e meu contrato em Araçoiaba) ousando estudar e procurar um estágio na área de desenvolvimento.</br></b>
     </ul>
-</p>
+    </p>
+</div>
 
-<button type = "button" onclick="document.getElementById('about').style.color = 'red'">
-    Saiba mais! 
+<div id="pessoal" class="pessoal none">
+    <p>
+    <b><br>25 anos, ariana, casada, mãe de 3 gatos</br></b>
+    <ul>
+        <li>Nasci no dia 09 de abril de 1995.</li>
+        <li>Tenho 1 irmão mais velho e um sobrinho lindo de viver.</li>
+        <li>Tenho, com muita sorte, pais presentes que sempre me apoiaram e deram suporte.</li>
+        <li>Sempre fui curiosa, portanto, sempre gostei de estudar e procurar coisas novas (histórias, séries, filmes, músicas).</li>
+        <li>Gosto muito de animais, tive vários cachorrinhos na família que eram considerados irmãos.</li>
+        <li>Me casei no ano de 2020, e tenho um marido ótimo e um melhor amigo sensacional.</li>
+        <li>Juntos, adotamos 3 gatinhos (dois irmãos primeiro e uma menina teimosa quase um ano depois).</li>
+        <li>Gosto muito de sair, conversar, se divertir.</li>
+        <li>Mas também amo ficar em casa, assistir um filme (ou vários), zerar uma série ou cozinhar algo gostoso.</li>
+        <li>Tenho amigos incríveis que sempre estão por perto, gosto de fazer novas amizades e juntá-los.</li>
+        <li>Ultimamente, me encontrei no esporte::: NATAÇÃO, definitivamente a melhor coisa que eu fiz na vida foi começar.</li>
+        <li>Também peguei gosto por praticar esportes (malhar, pedalar e correr), consegui fazer com que não seja obrigação, mas algo prazeroso.</li>
+        <b><br>Essa sou eu, vários gostos, várias manias, vários medos e várias coisas em constantes descobertas.</br></b>
+    </ul>
+    </p>
+</div>
+
+<button type="button" class="buttonCarreira" onclick="toggleCarreira()">
+    Carreira profissional
 </button>
 
-<script>
-    const nome = document.getElementById("nome").style.color = "#FFD700";
-    const me = document.getElementById("me").style.color = "#808080";
-    const about = document.getElementById("about").style.color = "#363636";
-    console.log(nome);
-    
-    const handleClick = () => nome.appendChild(about);
-    nome.addEventListener("click", handleClick);
+<button type="button" class="buttonPessoal" onclick="togglePessoal()">
+    Vida pessoal
+</button>
 
-    const text = document.createElement("spam");
-    text.innerHTML = "!!!";
+<button type="button" class="buttonVoltar" onclick="hideAll()">
+    Voltar
+</button>
 
-    //const handleMouseOver = () => nome.appendChild(about);
-    //nome.addEventListener("mouseover", handleMouseOver);
-    
-    //const handleMouseOut = () => nome.removeChild(about);
-    //nome.addEventListener("mouseout", handleMouseOut);
-
-</script>
+<script src="script.js"> </script>
 
 
 
